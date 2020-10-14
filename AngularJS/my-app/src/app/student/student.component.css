@@ -1,0 +1,17 @@
+.student {
+    width: 100%;
+    display: inline-flex;
+}
+
+.student_info {
+    width: 80%;
+    height: 100%;
+    padding-right: 20px;
+}
+.student_img {
+    width: 20%;
+}
+
+.student_img img {
+    width: 100%;
+}

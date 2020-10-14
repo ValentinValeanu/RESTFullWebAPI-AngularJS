@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from '../student/student'
 
 @Component({
   selector: 'app-student',
@@ -7,16 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
+  students : Student[]; 
+
   constructor() { }
+
+  fill_data(data)
+  {
+    this.students = data;
+  }
 
   ngOnInit(): void {
 
-    var data = fetch("https://localhost:44302/api/test", {
+    fetch("https://localhost:44302/api/test", {
       method: 'GET',
       headers: {
         'Access-Control-Allow-Origin': '*'
       }
-    }).then(res => res.json()).then(data => console.log(data))
+    }).then(res => res.json()).then(data => this.fill_data(data))
   }
 
 }

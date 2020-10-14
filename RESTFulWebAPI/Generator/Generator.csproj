@@ -67,6 +67,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\200-Sir_Winston_S_Churchill.jpg" />
     <Content Include="Images\gorbachev2.jpg" />
     <Content Include="Images\lenin.jpg" />
   </ItemGroup>

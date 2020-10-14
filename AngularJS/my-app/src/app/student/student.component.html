@@ -1,1 +1,18 @@
-<p>student works!</p>
+<h2>List of students:</h2>
+
+<ul class="students">
+    <li *ngFor="let student of students">
+        <h3>{{student.Name}} - <i>{{student.Age}}</i></h3>
+        <div class="student">
+            <div class="student_info">
+                <p><strong>Nationality:</strong> {{student.Nationality}}</p>
+                <p>
+                    {{student.Description}}
+                </p>
+            </div>
+            <div class="student_img">
+                <img src="{{'data:image/jpg;base64,' + student.Picture}}"/>
+            </div>
+        </div>
+    </li>
+</ul>

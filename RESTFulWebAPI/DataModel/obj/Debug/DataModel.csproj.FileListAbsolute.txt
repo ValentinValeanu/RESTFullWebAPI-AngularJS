@@ -12,3 +12,4 @@ F:\Val\Informatica\GIT\Angular.js and RestFul WebAPI\RESTFulWebAPI\DataModel\obj
 F:\Val\Informatica\GIT\Angular.js and RestFul WebAPI\RESTFulWebAPI\DataModel\obj\Debug\DataModel.Migrations.InitialMigration.resources
 F:\Val\Informatica\GIT\Angular.js and RestFul WebAPI\RESTFulWebAPI\DataModel\obj\Debug\DataModel.csproj.GenerateResource.cache
 F:\Val\Informatica\GIT\Angular.js and RestFul WebAPI\RESTFulWebAPI\DataModel\obj\Debug\DataModel.Migrations.Student_Pic.resources
+F:\Val\Informatica\GIT\Angular.js and RestFul WebAPI\RESTFulWebAPI\DataModel\obj\Debug\DataModel.Migrations.picstring.resources
