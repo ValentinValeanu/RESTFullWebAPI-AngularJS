@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, PipeTransform } from '@angular/core';
 import { Student } from '../student/student'
 
 @Component({
@@ -8,14 +8,11 @@ import { Student } from '../student/student'
 })
 export class StudentComponent implements OnInit {
 
+  contStr : string = "";
+  minimumAge : number = 0;
   students : Student[]; 
 
   constructor() { }
-
-  fill_data(data)
-  {
-    this.students = data;
-  }
 
   ngOnInit(): void {
 
@@ -24,7 +21,20 @@ export class StudentComponent implements OnInit {
       headers: {
         'Access-Control-Allow-Origin': '*'
       }
-    }).then(res => res.json()).then(data => this.fill_data(data))
+    }).then(res => {
+      if (res.ok)
+        return res.json();
+      else 
+        return null
+    })
+    .then(data => (this.students = data))
+  }
+
+  filter(list: Student[]): Student[] {
+    
+    return list.filter(x => x.Age >= this.minimumAge)
+               .filter(x => x.Name.toLowerCase().includes(this.contStr.toLowerCase()))
+               .sort((x, y) => (x.Age > y.Age ? 1: x.Age < y.Age ? 0 : -1))
   }
 
 }

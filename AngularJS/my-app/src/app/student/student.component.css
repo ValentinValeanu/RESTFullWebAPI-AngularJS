@@ -3,6 +3,14 @@
     display: inline-flex;
 }
 
+label {
+    padding-right: 25px;
+}
+
+.full_width {
+    width: 100%;
+}
+
 .student_info {
     width: 80%;
     height: 100%;
