@@ -1,0 +1,58 @@
+.main 
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%;
+    width: 70px;
+    background-color: #1976d2;
+}
+
+.main .arrow 
+{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 30px;
+    margin-top: 95%;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.main .arrow:hover 
+{
+    opacity: 0.8;
+}
+
+@keyframes toggle_in {
+    from { width: 400px }
+    to { width: 70px }
+}
+
+@keyframes toggle_out {
+    from { width: 70px }
+    to { width: 400px }
+}
+
+@keyframes rotate_arr_clock {
+    from { 
+        right: 340px;
+        transform: rotate(0deg);
+    }
+    to { 
+        right: 20px;
+        transform: rotate(180deg); 
+    }
+}
+
+@keyframes rotate_arr_c_clock {
+    from { 
+        right: 20px;
+        transform: rotate(180deg);
+    }
+    to { 
+        right: 340px;
+        transform: rotate(0deg); 
+    }
+}

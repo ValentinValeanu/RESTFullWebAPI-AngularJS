@@ -1,23 +1,26 @@
-<div class="full_width">
-    <h2>List of students:</h2>
-    <label>Older than: <input [(ngModel)]="minimumAge"/></label>
-    <label>Contains string: <input [(ngModel)]="contStr"/></label>
-</div>
-<div class="full_width">
-    <ul class="students">
-        <li *ngFor="let student of filter(students)">
-            <h3>{{student.Name}} - <i>{{student.Age}}</i></h3>
-            <div class="student">
-                <div class="student_info">
-                    <p><strong>Nationality:</strong> {{student.Nationality}}</p>
-                    <p>
-                        {{student.Description}}
-                    </p>
-                </div>
-                <div class="student_img">
-                    <img src="{{'data:image/jpg;base64,' + student.Picture}}"/>
-                </div>
+<h2>List of students:</h2>
+<label>Older than: <input [(ngModel)]="minimumAge"/></label>
+<label>Contains string: <input [(ngModel)]="contStr"/></label>
+<hr/>
+
+<ul class="students">
+    <li *ngFor="let student of filter(students)">
+        <h3>{{student.Name}} - <i>{{student.Age}}</i></h3>
+        <div class="student">
+            <div class="student_info">
+                <p><strong>Nationality:</strong> {{student.Nationality}}</p>
+                <p>
+                    {{student.Description}}
+                </p>
             </div>
-        </li>
-    </ul>
+            <div class="student_img">
+                <img src="{{'data:image/jpg;base64,' + student.Picture}}"/>
+            </div>
+        </div>
+        <hr/>
+    </li>
+</ul>
+
+<div class="buttons">
+    <button>Add new student</button>
 </div>

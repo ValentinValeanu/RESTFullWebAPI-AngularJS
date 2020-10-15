@@ -1,6 +1,8 @@
 import { Component, OnInit, PipeTransform } from '@angular/core';
 import { Student } from '../student/student'
 
+import { Algo } from '../../algorithms/algo'
+
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
@@ -11,8 +13,12 @@ export class StudentComponent implements OnInit {
   contStr : string = "";
   minimumAge : number = 0;
   students : Student[]; 
+  algo : Algo;
 
-  constructor() { }
+  constructor() { 
+
+    this.algo = new Algo();
+  }
 
   ngOnInit(): void {
 
@@ -33,7 +39,7 @@ export class StudentComponent implements OnInit {
   filter(list: Student[]): Student[] {
     
     return list.filter(x => x.Age >= this.minimumAge)
-               .filter(x => x.Name.toLowerCase().includes(this.contStr.toLowerCase()))
+               .filter(x => this.algo.pattern_matching(x.Name, this.contStr))
                .sort((x, y) => (x.Age > y.Age ? 1: x.Age < y.Age ? 0 : -1))
   }
 
