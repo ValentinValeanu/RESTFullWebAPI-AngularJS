@@ -56,27 +56,3 @@
         transform: rotate(0deg); 
     }
 }
-
-@keyframes change_color_in {
-    0% {
-        color: #1976d2;
-    }
-    50% {
-        color: rgb(187, 28, 28);
-    }
-    100% {
-        color: white;
-    }
-}
-
-@keyframes change_color_out {
-    0% {
-        color: white;
-    }
-    50% {
-        color: rgb(187, 28, 28);
-    }
-    100% {
-        color: white;
-    }
-}

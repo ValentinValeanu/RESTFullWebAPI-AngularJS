@@ -28,10 +28,10 @@
     background-color: red;
 }
 
-.form .to_show {
-    opacity: 0;   
+.to_show {
+    opacity: 0;
 }
 
-.to_show {
-    color: #1976d2;
+#button {
+    margin-top: 20px;
 }

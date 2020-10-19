@@ -36,9 +36,21 @@ export class AddNewStudentComponent implements OnInit {
         items[i].style.right = "-400px";
       }
 
+      for (var i = 0; i < shows.length; i++) {
+        shows[i].animate([
+          { opacity: "1" },
+          { opacity: "0" }
+        ], {
+          duration: 600,
+          easing: "ease"
+        })
+
+        shows[i].style.opacity = "0";
+      }
+
       // animate
-      shows[0].style.animation = "change_color_out 1s ease";
-      shows[0].style.color = "#1976d2";
+      shows[0].style.animation = "change_op_out 0.5s ease";
+      shows[0].style.opacity = "0";
       pannel[0].style.animation = "toggle_in 1s ease";
       pannel[0].style.width = "70px"
       pannel_arr[0].style.animation = "rotate_arr_clock 1s ease";
@@ -59,9 +71,19 @@ export class AddNewStudentComponent implements OnInit {
         items[i].style.right = "0px";
       }
 
+      for (var i = 0; i < shows.length; i++) {
+        shows[i].animate([
+          { opacity: "0" },
+          { opacity: "1" }
+        ], {
+          duration: 600,
+          easing: "ease"
+        })
+
+        shows[i].style.opacity = "1";
+      }
+
       // animate
-      shows[0].style.animation = "change_color_in 1s ease";
-      shows[0].style.color = "white";
       pannel[0].style.animation = "toggle_out 1s ease";
       pannel[0].style.width = "400px"
       pannel_arr[0].style.animation = "rotate_arr_c_clock 1s ease";
