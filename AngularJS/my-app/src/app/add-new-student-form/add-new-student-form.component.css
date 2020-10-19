@@ -1,3 +1,37 @@
 .form {
-    margin-top: 100px;
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+}
+
+.form .items {
+    position: relative;
+}
+
+.form .item {
+    text-align: left;
+    width: 300px;
+    padding-top: 10px;
+    padding-left: 10%;
+    position: relative;
+    right: -400px;
+}
+
+.form .item input {
+    height: 25px;
+    width: 80%;
+}
+
+.form .line {
+    height: 1px;
+    background-color: red;
+}
+
+.form .to_show {
+    opacity: 0;   
+}
+
+.to_show {
+    color: #1976d2;
 }

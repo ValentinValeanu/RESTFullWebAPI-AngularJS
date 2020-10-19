@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNewStudentFormComponent implements OnInit {
 
+  model : { name: string, age: number, nationality: string, description: string; } = 
+          { name: "", age : 0, nationality : "", description : "" }
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,7 +1,32 @@
 
 <div class="form">
-    <label> Name: <input type="text" required [(ngModel)]="model.name" name="name"/> </label> <br/>
-    <label> Age: <input type="text" required [(ngModel)]="model.age" name="age"/> </label> <br/>
-    <label> Nationality: <input type="text" required [(ngModel)]="model.nationality" name="nationality"/> </label> <br/>
-    <label> Description: <input type="text" required [(ngModel)]="model.description" name="description"/> </label>
+
+    <p class="to_show">Add a new student:</p>
+
+    <div class="line to_show"></div>
+
+    <div class="items">
+        <div class="item">
+            <label> Name: </label> <br/><br/>
+            <input type="text" required [(ngModel)]="model.name" name="name"/>
+        </div>
+        <div class="item">
+            <label> Age: </label> <br/> <br/>
+            <input type="text" required [(ngModel)]="model.age" name="age"/> 
+        </div>
+        <div class="item">
+            <label> Nationality: </label> <br/> <br/>
+            <input type="text" required [(ngModel)]="model.nationality" name="nationality"/>
+        </div>
+        <div class="item">
+            <label> Description: </label> <br/> <br/> 
+            <input [(ngModel)]="model.description" required name="description"/>
+        </div>
+        <div class="item">
+            <label> Image: </label> <br/> <br/> 
+            <input type="file" id="img" name="img" accept="image/*"/>
+        </div>
+
+        <input class="to_show" type="submit"/>
+    </div>
 </div>
