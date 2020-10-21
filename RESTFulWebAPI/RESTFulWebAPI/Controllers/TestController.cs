@@ -7,6 +7,7 @@ using System.Web.Http;
 
 using DataModel;
 using Microsoft.AspNetCore.Cors;
+using Newtonsoft.Json;
 
 namespace RESTFulWebAPI.Controllers
 {
@@ -32,8 +33,11 @@ namespace RESTFulWebAPI.Controllers
         }
 
         // POST: api/Test
-        public void Post([FromBody]string value)
+        [HttpPost]
+        public void Post(Student newStudent)
         {
+            dataContext.Students.Add(newStudent);
+            dataContext.SaveChanges();
         }
 
         // PUT: api/Test/5

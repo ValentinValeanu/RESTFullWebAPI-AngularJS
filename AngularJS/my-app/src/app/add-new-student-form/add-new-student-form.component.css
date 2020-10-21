@@ -23,6 +23,10 @@
     width: 80%;
 }
 
+.form .desc input {
+    height: 70px;
+}
+
 .form .line {
     height: 1px;
     background-color: red;

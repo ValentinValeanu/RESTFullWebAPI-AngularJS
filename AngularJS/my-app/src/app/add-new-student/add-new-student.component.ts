@@ -26,7 +26,7 @@ export class AddNewStudentComponent implements OnInit {
 
       for (var i = 0; i < items.length; i++) {
         items[i].animate([
-          { right: "0px" },
+          { right: "-40px" },
           { right: "-400px"}
         ], {
           duration: 500 + i * 200,
@@ -62,13 +62,13 @@ export class AddNewStudentComponent implements OnInit {
       for (var i = 0; i < items.length; i++) {
         items[i].animate([
           { right: "-400px" },
-          { right: "0px"}
+          { right: "-40px"}
         ], {
           duration: 500 + i * 200,
           easing: "ease"
         })
 
-        items[i].style.right = "0px";
+        items[i].style.right = "-40px";
       }
 
       for (var i = 0; i < shows.length; i++) {

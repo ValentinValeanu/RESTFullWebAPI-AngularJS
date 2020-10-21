@@ -22,18 +22,25 @@ export class StudentComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.update_list();
+
+    setInterval(() => this.update_list(), 2500);
+  }
+
+  update_list()
+  {
     fetch("https://localhost:44302/api/test", {
-      method: 'GET',
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      }
-    }).then(res => {
-      if (res.ok)
-        return res.json();
-      else 
-        return null
-    })
-    .then(data => (this.students = data))
+        method: 'GET',
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
+      }).then(res => {
+        if (res.ok)
+          return res.json();
+        else 
+          return null
+      })
+      .then(data => (this.students = data))
   }
 
   filter(list: Student[]): Student[] {
