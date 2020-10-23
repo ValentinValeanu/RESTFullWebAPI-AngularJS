@@ -29,8 +29,72 @@ label {
 }
 
 button {
+    padding: 0 10px 0 10px;
     height: 50px;
     cursor: pointer;
     background-color: aliceblue;
     border: none;
+}
+
+.update_student {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.update_student input {
+    width: 100%;
+}
+
+.update_student .form {
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    width: 300px;
+}
+
+.update_student .header {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.update_student .form .item {
+    margin-bottom: 10px;
+}
+
+.update_student .form .close_button {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 5px 5px 0px 0px;
+}
+
+.update_student .form .close_button svg {
+    padding-top: 10%;
+    width: 80%;
+    height: 80%;
+}
+
+.update_student .form button {
+    margin-top: 10px;
+}
+
+.update_student textarea {
+    width: 100%;
+    height: 150px;
 }

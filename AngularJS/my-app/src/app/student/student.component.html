@@ -12,6 +12,7 @@
                 <p>
                     {{student.Description}}
                 </p>
+                <button #student (click)="update_student(student)">Change student information</button>
             </div>
             <div class="student_img">
                 <img src="{{'data:image/jpg;base64,' + student.Picture}}"/>
@@ -23,4 +24,43 @@
 
 <div class="buttons">
     <button>Add new student</button>
+</div>
+
+<div class="update_student">
+    
+    <div class="form">
+
+        <div class="close_button" (click)="close_update_student()">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </div>
+
+        <h3 class="header">Update student information:</h3>
+
+        <div class="items">
+            <div class="item">
+                <label> Name: </label> <br/><br/>
+                <input type="text" required [(ngModel)]="infoStudent.Name" name="name"/>
+            </div>
+            <div class="item">
+                <label> Age: </label> <br/> <br/>
+                <input type="text" required [(ngModel)]="infoStudent.Age" name="age"/> 
+            </div>
+            <div class="item">
+                <label> Nationality: </label> <br/> <br/>
+                <input type="text" required [(ngModel)]="infoStudent.Nationality" name="nationality"/>
+            </div>
+            <div class="item desc">
+                <label> Description: </label> <br/> <br/> 
+                <textarea [(ngModel)]="infoStudent.Description" required name="description"> </textarea>
+            </div>
+            <div class="item">
+                <label> Image: </label> <br/> <br/> 
+                <input type="file" id="img" name="img" accept="image/*" (change)="image_uploaded($event)"/>
+            </div>
+        </div>
+
+        <button (click)="update_student_info()">Update Student</button>
+    </div>
 </div>

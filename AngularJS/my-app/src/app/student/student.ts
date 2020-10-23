@@ -5,5 +5,5 @@ export interface Student
     Age: number,
     Nationality: string,
     Description: string,
-    Picture: unknown
+    Picture: string
 }
