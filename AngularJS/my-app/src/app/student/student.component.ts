@@ -81,8 +81,26 @@ export class StudentComponent implements OnInit {
     }, 200);
   }
 
+  async putData(url = '', data = {}) {
+
+    const response = await fetch(url, {
+      method : 'PUT',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+
+    return response.json();
+  }
+
   update_student_info()
   {
+    this.putData("https://localhost:44302/api/test", this.infoStudent);
+
     this.close_update_student();
   }
 
