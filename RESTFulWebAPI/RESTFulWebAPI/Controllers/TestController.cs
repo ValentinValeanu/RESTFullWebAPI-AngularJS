@@ -44,9 +44,13 @@ namespace RESTFulWebAPI.Controllers
         [HttpPut]
         public void Put(Student updStudent)
         {
-            dataContext.Students.Remove(dataContext.Students.First(x => x.StudentID == updStudent.StudentID));
+            var student = dataContext.Students.FirstOrDefault(x => x.StudentID == updStudent.StudentID);
 
-            dataContext.Students.Add(updStudent);
+            student.Age = updStudent.Age;
+            student.Name = updStudent.Name;
+            student.Picture = updStudent.Picture;
+            student.Nationality = updStudent.Nationality;
+            student.Description = updStudent.Description;
 
             dataContext.SaveChanges();
         }
